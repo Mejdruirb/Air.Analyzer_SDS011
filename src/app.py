@@ -26,7 +26,7 @@ def reconfigure_data(measurement):
     measurement = measurement[:30]
     measurement.reverse()
     return {
-        'labels': [x['measurement']['timestamp'] for x in measurement],
+        'labels': [x['measurement']['time'] for x in measurement],
         'pm10': {
             'label': 'pm10',
             'data': [x['measurement']['pm10'] for x in measurement],
